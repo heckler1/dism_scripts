@@ -22,6 +22,7 @@ echo Exit
 echo Applying images...
 dism /Apply-Image /ImageFile:<WINDOWS_IMAGE>.wim /Index:1 /ApplyDir:C:\
 dism /Apply-Image /ImageFile:<EFI_IMAGE>.wim /Index:1 /ApplyDir:S:\
+dism /Apply-Image /ImageFile:<RECOVERY_IMAGE>.wim /Index:1 /ApplyDir:R:\
 
 echo Resetting bootloader
 bcdedit /set {bootmgr} device partition=s:
